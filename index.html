@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VEX Tasa Libre — El dólar de Venezuela, sin trabas</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="assets/logo-512x512.png" alt="Logo" style="width: 24px; height: 24px; margin-left: -20px;">
+    VEX Tasa Libre
+  </a>
+  <button class="btn-nav" onclick="downloadAPK()">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Descargar gratis
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <h1>El dólar <span class="accent">libre</span> de Venezuela</h1>
+
+  <p class="hero-sub">
+    Sin anuncios. Sin rastreadores. Sin registros.<br>
+    Descarga la app, abre y ya está — el precio del dolar en tiempo real, al instante.
+  </p>
+
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="downloadAPK()">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar APK gratis
+    </button>
+    <button class="btn-ghost" onclick="document.getElementById('como').scrollIntoView({behavior:'smooth'})">
+      ¿Cómo funciona?
+    </button>
+  </div>
+
+  <!-- RATE PREVIEW -->
+  <div class="rate-card">
+    <span class="rate-label">Tasa Libre USD / VES</span>
+    <span class="rate-value" id="rateDisplay">Bs. 47.20</span>
+    <div class="rate-sub">
+      <span class="rate-change">+0.8% hoy</span>
+      <span>·</span>
+      <span>BCV: Bs. 479,77</span>
+    </div>
+    <div class="rate-updated">
+      <span class="live"></span>
+      Valor ficticio
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip appear">
+  <div class="trust-item">
+    <span class="trust-icon">🔒</span>
+    Sin registro ni cuenta
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">📵</span>
+    Cero publicidad
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">📂</span>
+    Código abierto
+  </div>
+  <div class="trust-item">
+    <span class="trust-icon">📱</span>
+    Solo 4 MB
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section appear">
+  <div class="section-label">Por qué VEX</div>
+  <h2 class="section-title">Hecha para el venezolano de a pie</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-emoji">⚡</span>
+      <div class="feature-title">Rapidísima</div>
+      <p class="feature-desc">Abre en menos de un segundo. La tasa aparece de inmediato, sin anuncios que cargar ni pantallas de bienvenida molestas.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🕵️</span>
+      <div class="feature-title">100% privada</div>
+      <p class="feature-desc">No pedimos tu nombre, tu teléfono ni tu correo. No hay cuenta que crear. Tu celular, tu información.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">📡</span>
+      <div class="feature-title">Datos reales</div>
+      <p class="feature-desc">Tomamos la tasa del mercado paralelo en tiempo real, no el precio oficial del BCV. El dólar como lo conoce la calle.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🌐</span>
+      <div class="feature-title">Funciona offline</div>
+      <p class="feature-desc">¿Se fue la luz o la señal? La app muestra el último precio guardado para que no te quedes sin referencia.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🧮</span>
+      <div class="feature-title">Calculadora incluida</div>
+      <p class="feature-desc">Convierte de bolívares a dólares y viceversa con un solo toque. Perfecto para el mercado, el negocio o el buhonero.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-emoji">🎁</span>
+      <div class="feature-title">Siempre gratis</div>
+      <p class="feature-desc">No hay versión premium. No hay suscripción. Ni ahora ni nunca. Es open source y siempre lo será.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW TO -->
+<div class="how-section" id="como">
+  <div class="section appear">
+    <div class="section-label">Así de fácil</div>
+    <h2 class="section-title">En 3 pasos y menos de 1 minuto</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Descarga el APK</div>
+        <p class="step-desc">Toca el botón de abajo. Se descarga un archivo pequeño directamente a tu celular, sin pasar por Play Store.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Instala en 10 segundos</div>
+        <p class="step-desc">Abre el archivo que bajaste. Si Android te pregunta sobre "fuentes desconocidas", solo da permitir — es seguro.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Abre y listo</div>
+        <p class="step-desc">Ya tienes el precio del dólar en tu pantalla. Sin crear cuenta, sin spam, sin más pasos.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 1.5rem; background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.2); border-radius: 16px; display:flex; gap: 1rem; align-items:flex-start;">
+      <span style="font-size:1.5rem;flex-shrink:0;">💡</span>
+      <div>
+        <strong style="color:var(--gold);font-size:0.9rem;display:block;margin-bottom:0.3rem;">¿Nunca has instalado un APK?</strong>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;">No te preocupes, es el mismo proceso que usar WhatsApp en un celular nuevo. Si Android pide permiso, solo di que sí. La app no tiene virus ni spyware — el código es público y cualquiera lo puede revisar en GitHub.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section appear">
+  <div class="section-label">La gente habla</div>
+  <h2 class="section-title">Lo que dicen los usuarios</h2>
+
+  <div class="testimonials">
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Por fin una app que abre y ya. Sin anuncios de créditos ni de nada. El precio ahí, clarito. Llevo 6 meses usándola a diario."</p>
+      <div class="testi-author"><strong>@mariana_cv</strong> · Caracas</div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Le di el APK a mi mamá y lo instaló sola. Eso dice todo. Sencilla de verdad, no como las otras que piden hasta el DNI."</p>
+      <div class="testi-author"><strong>@pedro_maracaibo</strong> · Maracaibo</div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"La uso en el negocio para calcular precios. La calculadora incluida es un golazo. Rápida, precisa y sin anuncios molestos."</p>
+      <div class="testi-author"><strong>@tienda_barinas</strong> · Barinas</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="section appear" style="padding-top:0">
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Descargas</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">5.0★</div>
+      <div class="stat-label">Valoración media</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">30s</div>
+      <div class="stat-label">Frecuencia actualización</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">0 $</div>
+      <div class="stat-label">Costo siempre</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section appear">
+  <div class="cta-bg"></div>
+  <div class="cta-inner">
+    <div class="cta-title">Descárgala ahora,<br>es gratis</div>
+    <p class="cta-sub">Miles de venezolanos ya consultan el dólar sin publicidad, sin cuentas y sin complicaciones. Únete.</p>
+    <button class="btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;margin:0 auto;" onclick="downloadAPK()">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar APK gratis — 50 MB
+    </button>
+    <p style="margin-top:1rem;font-size:0.78rem;color:var(--muted);">Solo para Android · iOS próximamente</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <span style="width:8px;height:8px;background:var(--gold);border-radius:50%;box-shadow:0 0 8px var(--gold);"></span>
+    <span>VEX Tasa Libre · MIT License · 2026 · wanxiturro</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://github.com/wanxiturro/vex-tasa-libre-flutter">GitHub</a>
+    <a href="#">Privacidad</a>
+    <a href="#">Contacto</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
