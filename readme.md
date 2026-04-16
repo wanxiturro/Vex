@@ -15,7 +15,7 @@
 
 ## 🌐 Página web
 
->> https://wanxiturro.github.io/Vex/
+> https://wanxiturro.github.io/Vex/
 
 ---
 
